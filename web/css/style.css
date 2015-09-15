@@ -1,221 +1,214 @@
+/*
+	==================
+	[IMPORT SCSS]
+	==================
+*/
+/*
+	==================
+	[MAIN]
+	==================
+*/
 @font-face {
-    font-family: 'still_time_cyr';
-    src: url('fonts/still_time_cyr/still_time_cyr_regular-webfont.eot');
-    src: local('pfdintextcomppro-regular-webfont'),
-    url('fonts/still_time_cyr/still_time_cyr_regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/still_time_cyr/still_time_cyr_regular-webfont.woff2') format('woff2'),
-    url('fonts/still_time_cyr/still_time_cyr_regular-webfont.woff') format('woff'),
-    url('fonts/still_time_cyr/still_time_cyr_regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-html, body{
-    height:100%;
-    padding:0;
-}
-body{
-    font-size: 13px;
-    background-image: url("../img/bg.png");
-    background-repeat: no-repeat;
-}
-section {
-    /*min-height:100%;*/
-    width: 978px;
-    margin: 0 auto;
-    position:relative
-}
-header {
-    position: absolute;
-    width: 100%;
-    height:210px;
-    top:0;
-    z-index: 1;
-}
-#top {
-    position: relative;
-    width: 100%;
-    height:90px;
-    top:0;
-    z-index: 1;
-    background-color: #7da366;
-    box-shadow: 0.4em 0.4em 5px rgba(0,0,0,0.8);
-}
-.container{
-    position: relative;
-    width:978px;
-    margin: 0 auto;
-}
-#deers{
-    position: relative;
-    float: left;
-    margin-left: 30px;
-    width: 355px;
-    height: 90px;
-    padding-top: 6px;
-}
-#logo{
-    position: relative;
-    float: left;
-    margin-left: 50px;
-    width: 101px;
-    height: 90px;
-    padding-top: 9px;
-}
-#authorization{
-    font-family: arial;
-    position: relative;
-    float: right;
-    height: 90px;
-    width: 390px;
-    padding-top: 24px;
-}
+  font-family: 'still_time_cyr';
+  src: url("fonts/still_time_cyr/still_time_cyr_regular-webfont.eot");
+  src: local("pfdintextcomppro-regular-webfont"), url("fonts/still_time_cyr/still_time_cyr_regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/still_time_cyr/still_time_cyr_regular-webfont.woff2") format("woff2"), url("fonts/still_time_cyr/still_time_cyr_regular-webfont.woff") format("woff"), url("fonts/still_time_cyr/still_time_cyr_regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+html, body {
+  height: 100%;
+  padding: 0; }
 
-#authorization a{
-    color:black;
-    text-decoration: underline;
-}
-#authorization a:hover{
-    text-decoration: none;
-    color:red;
-}
-#authorization .pole{
-    height: 30px;
-    width: 160px;
-    margin: 0 5px;
-    padding-left: 20px;
-    border-radius: 6px;
-    box-shadow: 3px -3px;
-    float: right;
-}
-#log_in{
-    float: left;
-    margin-left: 10px;
-    margin-top: 5px;
-}
-#registration{
-    float:right;
-    margin-right: 10px;
-    margin-top: 5px;
-}
-#main_menu{
-    position: relative;
-    width: 100%;
-    height: 120px;
-    font-family: 'still_time_cyr';
-}
-#main_menu .container{
-    padding: 0 40px;
-}
-#main_menu ul{
+body {
+  font-size: 13px;
+  background-image: url("../img/bg.png");
+  background-repeat: no-repeat; }
+
+section {
+  /*min-height:100%;*/
+  width: 978px;
+  margin: 0 auto;
+  position: relative; }
+
+header {
+  position: absolute;
+  width: 100%;
+  height: 210px;
+  top: 0;
+  z-index: 1; }
+
+.container {
+  position: relative;
+  width: 978px;
+  margin: 0 auto; }
+
+/*
+	==================
+	[DIF]
+	==================
+*/
+hr {
+  clear: both;
+  color: black;
+  background-color: black;
+  border-top-color: black; }
+
+/*
+	==================
+	[HEADER]
+	==================
+*/
+header #top {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  top: 0;
+  z-index: 1;
+  background-color: #7da366;
+  box-shadow: 0.4em 0.4em 5px rgba(0, 0, 0, 0.8); }
+header #deers {
+  position: relative;
+  float: left;
+  margin-left: 30px;
+  width: 355px;
+  height: 90px;
+  padding-top: 6px; }
+header #logo {
+  position: relative;
+  float: left;
+  margin-left: 30px;
+  width: 101px;
+  height: 90px;
+  padding-top: 9px; }
+header #authorization {
+  font-family: arial;
+  position: relative;
+  float: right;
+  height: 90px;
+  width: 390px;
+  padding-top: 24px; }
+header #authorization a {
+  color: black;
+  text-decoration: underline; }
+header #authorization a:hover {
+  text-decoration: none;
+  color: red; }
+header #authorization .pole {
+  height: 30px;
+  width: 180px;
+  margin: 0 5px;
+  padding-left: 20px;
+  border-radius: 6px;
+  box-shadow: 3px -3px; }
+header #log_in {
+  float: left;
+  margin-left: 10px;
+  margin-top: 5px; }
+header #registration {
+  float: right;
+  margin-right: 10px;
+  margin-top: 5px; }
+
+/*
+	==================
+	[MENU]
+	==================
+*/
+#main_menu {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  font-family: 'still_time_cyr'; }
+  #main_menu .container {
+    padding: 0 40px; }
+    #main_menu .container ul .long_word {
+      padding-top: 2px; }
+  #main_menu ul {
     margin: 0;
-    padding-left: 0;
-}
-#main_menu li{
-    position: relative;
-    margin-top: -20px;
-    float: left;
-    width: 148px;
-    height: 95px;
-    margin-right: 8px;
-    background-image: url("../img/main_menu_button.png");
-    background-repeat: no-repeat;
-}
-#main_menu ul a:first-child li{
-    margin-left: 42px;
-}
-#main_menu li.active{
-    height: 115px;
-    background-image: url("../img/active_main_menu_button.png");
-}
-#main_menu span{
+    padding-left: 0; }
+    #main_menu ul li {
+      position: relative;
+      float: left;
+      width: 148px;
+      height: 95px;
+      margin-right: 2px;
+      background-image: url("../img/main_menu_button.png");
+      background-repeat: no-repeat; }
+      #main_menu ul li:last-child {
+        margin: 0; }
+      #main_menu ul li.active {
+        height: 115px;
+        background-image: url("../img/active_main_menu_button.png"); }
+  #main_menu span {
     display: table-cell;
     position: absolute;
-    top:48px;
-    left:10px;
+    top: 48px;
+    left: 10px;
     width: 128px;
     height: 38px;
     text-align: center;
-    padding-top: 12px;
-}
-#main_menu .container ul .long_word{
-    padding-top: 2px;
-}
-#main_menu .active span{
-    top: 68px;
-}
-#main_menu a{
+    padding-top: 12px; }
+  #main_menu .active span {
+    top: 68px; }
+  #main_menu a {
     color: #fff6c2;
     line-height: 1;
-    font-size:1.2em;
+    font-size: 1.2em;
     font-weight: bold;
     letter-spacing: 3px;
-    vertical-align: middle;
-}
-.main_container{
-    position: relative;
-    width: 100%;
-    min-height: 840px;
-    margin-top:120px;
-    background-color: #cee1cb;
-    box-shadow: inset 0 0 12px rgba(0,0,0,0.9);
-    padding: 0 30px;
-    padding-top: 90px;
-    padding-bottom: 20px;
-    font-weight: bold;
-}
-.main_container h4{
-    color:black;
-    text-align: center;
-}
-hr{
-    clear: both;
-    color:black;
-    background-color: black;
-    border-top-color:black;
-}
-#news li{
+    vertical-align: middle; }
+
+/*
+	==================
+	[CONTENT]
+	==================
+*/
+.main_container {
+  position: relative;
+  width: 100%;
+  min-height: 840px;
+  margin-top: 120px;
+  background-color: #cee1cb;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.9);
+  padding: 0 30px;
+  padding-top: 90px;
+  padding-bottom: 20px;
+  font-weight: bold; }
+  .main_container h4 {
+    color: black;
+    text-align: center; }
+  .main_container #news li {
     display: block;
     position: relative;
-    width:170px;
-    height:120px;
+    width: 170px;
+    height: 120px;
     float: left;
     margin-bottom: 20px;
-    margin-right: 38px;
-}
-#news li:first-child{
-    margin-left: 50px;
-}
-#news a{
-    color:black;
-}
-#news p{
-    text-align: center;
-}
-#rating{
+    margin-right: 38px; }
+  .main_container #news a {
+    color: black; }
+  .main_container #news p {
+    text-align: center; }
+  .main_container #rating {
     margin-left: 20px;
     position: relative;
     height: 180px;
     width: 200px;
-    float: left;
-}
-#rating li{
+    float: left; }
+  .main_container #rating li {
     margin-left: -60px;
-    width:250px;
-}
-#rating li span{
+    width: 250px; }
+  .main_container #rating li span {
     display: inline-block;
-    float: right;
-}
-#counters{
+    float: right; }
+  .main_container #counters {
     position: relative;
     width: 600px;
     height: 200px;
     float: right;
-    padding-top: 20px;
-}
-#counters li{
-    margin-bottom: 48px;
-}
-#counters li h4{
-    text-align: left;
-}
+    padding-top: 20px; }
+  .main_container #counters li {
+    margin-bottom: 48px; }
+  .main_container #counters li h4 {
+    text-align: left; }
+
+/*# sourceMappingURL=style.css.map */
