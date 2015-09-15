@@ -39,6 +39,18 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
+        'urlManager' => [
+            'class' => 'yii\web\UrlManager',
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+// стандартное правило для обработки '/' как 'site/index'
+                '<action:(view)>' => 'site/<action>',
+
+                // стандартное правило для обработки '/login' как 'site/login' и т.д.
+                '<action:(view)>' => 'site/<action>',
+            ],
+        ],
     ],
     'params' => $params,
 ];
