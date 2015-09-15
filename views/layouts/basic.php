@@ -1,17 +1,28 @@
 <?php
+
+/* @var $this \yii\web\View */
+/* @var $content string */
+
+use yii\helpers\Html;
+use yii\bootstrap\Nav;
+use yii\bootstrap\NavBar;
+use yii\widgets\Breadcrumbs;
+use app\assets\AppAsset;
+
+AppAsset::register($this);
 ?>
+<?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html lang="<?= Yii::$app->language ?>">
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
-    <link rel="stylesheet" href="css/style.css">
-    <title></title>
+    <meta charset="<?= Yii::$app->charset ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?= Html::csrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <?php $this->head() ?>
 </head>
 <body>
+<?php $this->beginBody() ?>
 <header>
     <div id="top">
         <div class="container">
@@ -122,9 +133,7 @@
     </div>
 </section>
 <footer></footer>
+<?php $this->endBody() ?>
 </body>
 </html>
-
-    
-<?php
-    $this->endPage();
+<?php $this->endPage() ?>
