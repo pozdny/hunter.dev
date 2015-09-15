@@ -8,6 +8,8 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use yii\bootstrap\Modal;
+use yii\widgets\ActiveForm;
 
 AppAsset::register($this);
 ?>
@@ -22,6 +24,7 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
+
 <?php $this->beginBody() ?>
 <header>
     <div id="top">
@@ -37,7 +40,8 @@ AppAsset::register($this);
                     <input id="player_login" class="pole" type="text" placeholder="Логин">
                     <input id="player_password" class="pole" type="password" placeholder="Пароль">
                     <a id="log_in" href="">ВХОД</a>
-                    <a id="registration" href="" >РЕГИСТРАЦИЯ</a>
+                   <a id="registration" href="#" data-target="#w0" data-toggle="modal">РЕГИСТРАЦИЯ</a>
+
                 </form>
             </div>
         </div>
@@ -133,7 +137,26 @@ AppAsset::register($this);
     </div>
 </section>
 <footer></footer>
+
+
+<?php Modal::begin(
+    [
+        'header' => '<h2>Тест модалки</h2>',
+
+    ]
+);
+echo 'Текст модалки';
+/*    print_r($model);
+echo '</pre>';
+
+$form = ActiveForm::begin();
+$form->field($model, 'nickname') ;
+ActiveForm::end();*/
+
+Modal::end();
+?>
 <?php $this->endBody() ?>
+
 </body>
 </html>
 <?php $this->endPage() ?>

@@ -48,10 +48,15 @@ class SiteController extends Controller
     }
 
     public function actionIndex()
-    {
+    {echo '7777';
         return $this->render('index');
     }
-
+    public function actionLog(){
+        echo '555';
+    }
+    public function actionView(){
+        echo 'nnn';
+    }
     public function actionLogin()
     {
         if (!\Yii::$app->user->isGuest) {
