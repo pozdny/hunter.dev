@@ -1,0 +1,58 @@
+/*
+	==================
+	[MENU]
+	==================
+*/
+#main_menu{
+  position: relative;
+  width: 100%;
+  height: 120px;
+  font-family: 'still_time_cyr';
+  & .container{
+    padding: 0 40px;
+    ul .long_word{
+      padding-top: 2px;
+    }
+  }
+  ul{
+    margin: 0;
+    padding-left: 0;
+    li{
+      position: relative;
+      float: left;
+      width: 148px;
+      height: 95px;
+      margin-right: 2px;
+      background-image: url("../img/main_menu_button.png");
+      background-repeat: no-repeat;
+      &:last-child{
+        margin: 0;
+      }
+      &.active{
+        height: 115px;
+        background-image: url("../img/active_main_menu_button.png");
+      }
+    }
+  }
+  span{
+    display: table-cell;
+    position: absolute;
+    top:48px;
+    left:10px;
+    width: 128px;
+    height: 38px;
+    text-align: center;
+    padding-top: 12px;
+  }
+  .active span{
+    top: 68px;
+  }
+  a{
+    color: #fff6c2;
+    line-height: 1;
+    font-size:1.2em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    vertical-align: middle;
+  }
+}
