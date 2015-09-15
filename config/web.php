@@ -1,6 +1,7 @@
 <?php
 $config = [
     'id' => 'app',
+    'layout' => 'main',
     'components' => [
         'user' => [
             'identityClass' => 'app\models\User',

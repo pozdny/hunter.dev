@@ -15,6 +15,7 @@ $params = ArrayHelper::merge(
 return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'language' => 'ru',
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
@@ -40,5 +41,6 @@ return [
             'class' => 'yii\log\Dispatcher',
         ],
     ],
+    'timeZone' => 'UTC',
     'params' => $params,
 ];
