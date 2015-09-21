@@ -22,12 +22,13 @@ body{
   font-size: 13px;
   background-image: url("../img/bg.png");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 section {
   /*min-height:100%;*/
   width: 978px;
   margin: 0 auto;
-  position:relative
+  position:relative;
 }
 header {
   position: absolute;
@@ -36,10 +37,31 @@ header {
   top:0;
   z-index: 1;
 }
+#branches_left{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 587px;
+  width: 403px;
+  background-image: url("../img/branches_left.png");
+  background-repeat: no-repeat;
+  z-index: 199;
+}
+#branches_right{
+  position: absolute;
+  right: 0;
+  top: 150px;
+  height: 587px;
+  width: 403px;
+  background-image: url("../img/branches_right.png");
+  background-repeat: no-repeat;
+  z-index: 199;
+}
 .container{
   position: relative;
   width:978px;
   margin: 0 auto;
+
 }
 
 

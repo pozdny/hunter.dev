@@ -80,5 +80,32 @@ header{
       color:white;
       text-decoration: underline;
     }
+    #profile_menu{
+      position: relative;
+      height: 38px;
+      width: 77px;
+      float: right;
+      background-image: url("../img/profile_menu.png");
+      margin-top: -9px;
+      div{
+        position: relative;
+        height: 38px;
+        width: 36px;
+        float: right;
+      }
+      div:hover{
+        cursor: pointer;
+      }
+    }
+    p{
+      width: 260px;
+      position: relative;
+      display: block;
+      float: right;
+    }
+    ul{
+      display:none;
+    }
   }
+
 }

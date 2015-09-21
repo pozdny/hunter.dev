@@ -21,7 +21,8 @@ html, body {
 body {
   font-size: 13px;
   background-image: url("../img/bg.png");
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 section {
   /*min-height:100%;*/
@@ -35,6 +36,26 @@ header {
   height: 210px;
   top: 0;
   z-index: 1; }
+
+#branches_left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 587px;
+  width: 403px;
+  background-image: url("../img/branches_left.png");
+  background-repeat: no-repeat;
+  z-index: 199; }
+
+#branches_right {
+  position: absolute;
+  right: 0;
+  top: 150px;
+  height: 587px;
+  width: 403px;
+  background-image: url("../img/branches_right.png");
+  background-repeat: no-repeat;
+  z-index: 199; }
 
 .container {
   position: relative;
@@ -120,6 +141,27 @@ header #profile {
   header #profile span {
     color: white;
     text-decoration: underline; }
+  header #profile #profile_menu {
+    position: relative;
+    height: 38px;
+    width: 77px;
+    float: right;
+    background-image: url("../img/profile_menu.png");
+    margin-top: -9px; }
+    header #profile #profile_menu div {
+      position: relative;
+      height: 38px;
+      width: 36px;
+      float: right; }
+    header #profile #profile_menu div:hover {
+      cursor: pointer; }
+  header #profile p {
+    width: 260px;
+    position: relative;
+    display: block;
+    float: right; }
+  header #profile ul {
+    display: none; }
 
 /*
 	==================
@@ -179,12 +221,13 @@ header #profile {
   position: relative;
   width: 100%;
   min-height: 840px;
-  margin-top: 100px;
+  margin-top: 120px;
+  margin-bottom: 40px;
   background-color: #cee1cb;
   box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.9);
   padding: 0 30px;
   padding-top: 90px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   font-weight: bold; }
   .main_container h4 {
     color: black;
@@ -223,5 +266,48 @@ header #profile {
     margin-bottom: 48px; }
   .main_container #counters li h4 {
     text-align: left; }
+  .main_container h5 {
+    font-weight: bold;
+    font-size: 1.2em; }
+  .main_container .panel-group .panel .panel-heading h4 {
+    text-align: left !important; }
+    .main_container .panel-group .panel .panel-heading h4 a:focus {
+      outline: none !important; }
+  .main_container #news_ul li {
+    display: block;
+    position: relative;
+    width: 830px;
+    height: 210px;
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    padding-top: 60px; }
+    .main_container #news_ul li img {
+      position: relative;
+      width: 186px;
+      height: 92px;
+      float: left; }
+    .main_container #news_ul li span {
+      display: block;
+      position: relative;
+      width: 600px;
+      float: right; }
+    .main_container #news_ul li .button_a {
+      display: block;
+      position: relative;
+      height: 27px;
+      width: 180px;
+      background-color: #7da366;
+      float: right;
+      color: #000000;
+      text-decoration: none;
+      text-align: center;
+      padding-top: 3px; }
+    .main_container #news_ul li .button_a:hover {
+      text-decoration: underline; }
+
+@media (min-width: 1px) and (max-width: 1700px) {
+  #branches_left,
+  #branches_right {
+    z-index: 0; } }
 
 /*# sourceMappingURL=style.css.map */

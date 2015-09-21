@@ -48,14 +48,14 @@ class SiteController extends Controller
     }
 
     public function actionIndex()
-    {echo '7777';
+    {echo '';
         return $this->render('index');
     }
     public function actionLog(){
-        echo '555';
+        echo '';
     }
     public function actionView(){
-        echo 'nnn';
+        echo '';
     }
     public function actionLogin()
     {

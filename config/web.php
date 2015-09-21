@@ -1,7 +1,7 @@
 <?php
 $config = [
     'id' => 'app',
-    'layout' => 'main',
+    'layout' => 'news_page',
     'components' => [
         'user' => [
             'identityClass' => 'app\models\User',
