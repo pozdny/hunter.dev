@@ -59,6 +59,8 @@ AppAsset::register($this);
         </div>
     </div>
 </header>
+<div id="branches_left"></div>
+<div id="branches_right"></div>
 <section>
     <div class="container">
         <div class="main_container">
