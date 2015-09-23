@@ -20,6 +20,10 @@ return [
         'db' => [
             'class' => 'yii\db\Connection',
             'charset' => 'utf8',
+            'dsn' => 'mysql:host=localhost;dbname=seokeys',
+            'username' => 'root',
+            'password' => '',
+            'tablePrefix' => 'keys_',
         ],
         'urlManager' => [
             'class' => 'yii\web\UrlManager',
