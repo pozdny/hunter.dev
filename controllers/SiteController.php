@@ -48,14 +48,14 @@ class SiteController extends Controller
     }
 
     public function actionIndex()
-    {echo '';
+    {
         return $this->render('index');
     }
     public function actionLog(){
-        echo '';
+        echo '555';
     }
     public function actionView(){
-        echo '';
+        echo 'nnn';
     }
     public function actionLogin()
     {
@@ -80,7 +80,7 @@ class SiteController extends Controller
     }
 
     public function actionContact()
-    {
+    { echo '234';
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
             Yii::$app->session->setFlash('contactFormSubmitted');
@@ -95,5 +95,13 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+    public function actionForum()
+    {
+        return $this->render('forum');
+    }
+    public function actionRegistration()
+    {
+        return $this->render('registration');
     }
 }
