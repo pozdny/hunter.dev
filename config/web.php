@@ -2,6 +2,7 @@
 $config = [
     'id' => 'app',
     'layout' => 'main',
+    'basePath' => dirname(__DIR__),
     'components' => [
         'user' => [
             'identityClass' => 'app\models\User',

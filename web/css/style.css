@@ -86,25 +86,29 @@ header #top {
   z-index: 1;
   background-color: #7da366;
   box-shadow: 0.4em 0.4em 5px rgba(0, 0, 0, 0.8); }
+  header #top .container {
+    padding-top: 6px; }
 header #deers {
   position: relative;
   float: left;
   margin-left: 30px;
   width: 355px;
-  height: 90px;
-  padding-top: 6px; }
+  height: 84px;
+  background-image: url("../img/deers.png");
+  background-repeat: no-repeat; }
 header #logo {
   position: relative;
   float: left;
   margin-left: 30px;
   width: 101px;
-  height: 90px;
-  padding-top: 9px; }
+  height: 84px;
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat; }
 header #authorization {
   font-family: arial;
   position: relative;
   float: right;
-  height: 90px;
+  height: 84px;
   width: 390px;
   padding-top: 24px; }
 header #authorization a {

@@ -20,6 +20,10 @@ return [
         'db' => [
             'class' => 'yii\db\Connection',
             'charset' => 'utf8',
+            'dsn' => 'mysql:host=localhost;dbname=hunter_db',
+            'username' => 'root',
+            'password' => '',
+            'tablePrefix' => 'tbl_',
         ],
         'urlManager' => [
             'class' => 'yii\web\UrlManager',
@@ -40,6 +44,7 @@ return [
         'log' => [
             'class' => 'yii\log\Dispatcher',
         ],
+
     ],
     'timeZone' => 'UTC',
     'params' => $params,
