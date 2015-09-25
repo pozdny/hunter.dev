@@ -38,21 +38,42 @@ AppAsset::register($this);
                     <input id="player_login" class="pole" type="text" placeholder="Логин">
                     <input id="player_password" class="pole" type="password" placeholder="Пароль">
                     <a id="log_in" href="">ВХОД</a>
-                   <a id="registration" href="#" data-target="#w0" data-toggle="modal">РЕГИСТРАЦИЯ</a>
+                   <a id="registration" href="#">РЕГИСТРАЦИЯ</a>
                 </form>
             </div>
         </div>
     </div>
     <div id="main_menu">
         <div class="container">
-            <ul type="none">
+            <!--<ul type="none">
                 <a href="/web/"><li class="active"><span>ГЛАВНАЯ</span></li></a>
                 <a href="/web/site/registration"><li><span>РЕГИСТРАЦИЯ</span></li></a>
                 <a href="/web/site/rules"><li><span class="long_word">ПРАВИЛА ИГРЫ</span></li></a>
                 <a href="/web/site/faq"><li><span class="long_word">ОТВЕТЫ НА ВОПРОСЫ</span></li></a>
                 <a href="/web/site/news"><li><span>НОВОСТИ</span></li></a>
                 <a href="/web/site/forum"><li><span>ФОРУМ</span></li></a>
-            </ul>
+            </ul>-->
+            <?php
+            NavBar::begin([
+                'brandLabel' => '',
+                'brandUrl' => Yii::$app->homeUrl,
+                'options' => [
+                    'class' => 'navbar-main ',
+                ],
+            ]);
+            echo Nav::widget([
+                'options' => ['class' => 'navbar-nav '],
+                'items' => array_filter([
+                    ['label' => 'ГЛАВНАЯ', 'url' => ['/']],
+                    ['label' => 'РЕГИСТРАЦИЯ', 'url' => ['main/reg']],
+                    ['label' => 'ПРАВИЛА', 'url' => ['/site/rules']],
+                    ['label' => 'ВОПРОСЫ', 'url' => ['/site/faq']],
+                    ['label' => 'НОВОСТИ', 'url' => ['/site/news']],
+                    ['label' => 'ФОРУМ', 'url' => ['/site/forum']]
+                ]),
+            ]);
+            NavBar::end();
+            ?>
         </div>
     </div>
 </header>
@@ -71,13 +92,13 @@ AppAsset::register($this);
 <footer></footer>
 
 
-<?php Modal::begin(
+<?php /*Modal::begin(
     [
         'header' => '<h2>Тест модалки</h2>',
 
     ]
 );
-echo 'Текст модалки';
+echo 'Текст модалки';*/
 /*    print_r($model);
 echo '</pre>';
 
@@ -85,7 +106,7 @@ $form = ActiveForm::begin();
 $form->field($model, 'nickname') ;
 ActiveForm::end();*/
 
-Modal::end();
+/*Modal::end();*/
 ?>
 <?php $this->endBody() ?>
 

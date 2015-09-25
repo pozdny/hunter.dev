@@ -10,7 +10,9 @@ class m150921_123501_create_user_table extends Migration
         $this->createTable('users',[
             'id'=>'pk',
             'login'=>'string NOT NULL',
-            'fio'=>'string NOT NULL',
+            'family'=>'string NOT NULL',
+            'name'=>'string NOT NULL',
+            'father'=>'string NOT NULL',
             'email'=>'string NOT NULL',
             'pass'=>'string NOT NULL',
             'phone'=>'string NOT NULL',

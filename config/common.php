@@ -15,7 +15,7 @@ $params = ArrayHelper::merge(
 return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'language' => 'ru',
+    'language' => 'ru_RU',
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
@@ -44,7 +44,13 @@ return [
         'log' => [
             'class' => 'yii\log\Dispatcher',
         ],
-
+        /*'i18n' => [
+            'class' => 'yii\i18n\PhpMessageSource',
+            'forceTranslations' => true,
+            'fileMap' => [
+                'app' => 'app.php',
+            ],
+        ],*/
     ],
     'timeZone' => 'UTC',
     'params' => $params,

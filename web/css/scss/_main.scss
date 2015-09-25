@@ -45,7 +45,7 @@ header {
   width: 403px;
   background-image: url("../img/branches_left.png");
   background-repeat: no-repeat;
-  z-index: 199;
+  z-index: 1;
 }
 #branches_right{
   position: absolute;
@@ -55,7 +55,7 @@ header {
   width: 403px;
   background-image: url("../img/branches_right.png");
   background-repeat: no-repeat;
-  z-index: 199;
+  z-index: 1;
 }
 .container{
   position: relative;

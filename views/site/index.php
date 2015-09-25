@@ -75,3 +75,6 @@ $this->title = 'My Yii Application';
         <li><h4>Всего выведено игроками:</h4><span></span></li>
     </ul>
 </div>
+<script type="text/javascript">
+        $('#w1 li:first-child').addClass('active');
+</script>

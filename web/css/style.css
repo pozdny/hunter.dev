@@ -45,7 +45,7 @@ header {
   width: 403px;
   background-image: url("../img/branches_left.png");
   background-repeat: no-repeat;
-  z-index: 199; }
+  z-index: 1; }
 
 #branches_right {
   position: absolute;
@@ -55,7 +55,7 @@ header {
   width: 403px;
   background-image: url("../img/branches_right.png");
   background-repeat: no-repeat;
-  z-index: 199; }
+  z-index: 1; }
 
 .container {
   position: relative;
@@ -177,19 +177,15 @@ header #profile {
   width: 100%;
   height: 120px;
   font-family: 'still_time_cyr'; }
-  #main_menu .container {
-    padding: 0 40px; }
-    #main_menu .container ul .long_word {
-      padding-top: 2px; }
   #main_menu ul {
     margin: 0;
-    padding-left: 0; }
+    padding: 0; }
     #main_menu ul li {
       position: relative;
       float: left;
       width: 148px;
       height: 95px;
-      margin-right: 2px;
+      margin-right: 1px;
       background-image: url("../img/main_menu_button.png");
       background-repeat: no-repeat; }
       #main_menu ul li:last-child {
@@ -197,7 +193,7 @@ header #profile {
       #main_menu ul li.active {
         height: 115px;
         background-image: url("../img/active_main_menu_button.png"); }
-  #main_menu span {
+  #main_menu a {
     display: table-cell;
     position: absolute;
     top: 48px;
@@ -205,8 +201,9 @@ header #profile {
     width: 128px;
     height: 38px;
     text-align: center;
-    padding-top: 12px; }
-  #main_menu .active span {
+    padding: 0 !important;
+    padding-top: 14px !important; }
+  #main_menu .active a {
     top: 68px; }
   #main_menu a {
     color: #fff6c2;
@@ -215,6 +212,15 @@ header #profile {
     font-weight: bold;
     letter-spacing: 3px;
     vertical-align: middle; }
+  #main_menu .nav li a:hover {
+    background-color: transparent; }
+  #main_menu .nav li a:focus {
+    background-color: transparent;
+    outline: none; }
+  #main_menu #w0-collapse {
+    width: 920px; }
+    #main_menu #w0-collapse #w1 {
+      width: 920px; }
 
 /*
 	==================
