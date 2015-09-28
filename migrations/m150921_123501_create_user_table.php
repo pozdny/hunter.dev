@@ -8,15 +8,19 @@ class m150921_123501_create_user_table extends Migration
     public function up()
     {
         $this->createTable('users',[
-            'id'=>'pk',
-            'login'=>'string NOT NULL',
-            'family'=>'string NOT NULL',
-            'name'=>'string NOT NULL',
-            'father'=>'string NOT NULL',
-            'email'=>'string NOT NULL',
-            'pass'=>'string NOT NULL',
-            'phone'=>'string NOT NULL',
-            'rights'=>'string NOT NULL'
+            'id'=>Schema::TYPE_PK,
+            'login'=>Schema::TYPE_STRING.' NOT NULL',
+            'family'=>Schema::TYPE_STRING.' NOT NULL',
+            'name'=>Schema::TYPE_STRING.' NOT NULL',
+            'father'=>Schema::TYPE_STRING.' NOT NULL',
+            'email'=>Schema::TYPE_STRING.' NOT NULL',
+            'pass'=>Schema::TYPE_STRING.' NOT NULL',
+            'phone'=>Schema::TYPE_STRING.' NOT NULL',
+            'rights'=>Schema::TYPE_STRING.' NOT NULL',
+            'auth_key'=>Schema::TYPE_STRING.'(32) NOT NULL',
+            'status'=>Schema::TYPE_SMALLINT.' NOT NULL',
+            'created_at'=>Schema::TYPE_INTEGER.' NOT NULL',
+            'updated_at'=>Schema::TYPE_INTEGER.' NOT NULL'
         ]);
     }
 
