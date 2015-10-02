@@ -12,15 +12,15 @@ class m150921_123501_create_user_table extends Migration
             'login'=>Schema::TYPE_STRING.' NOT NULL',
             'family'=>Schema::TYPE_STRING.' NOT NULL',
             'name'=>Schema::TYPE_STRING.' NOT NULL',
-            'father'=>Schema::TYPE_STRING.' NOT NULL',
+            'father'=>Schema::TYPE_STRING,
             'email'=>Schema::TYPE_STRING.' NOT NULL',
-            'pass'=>Schema::TYPE_STRING.' NOT NULL',
-            'phone'=>Schema::TYPE_STRING.' NOT NULL',
-            'rights'=>Schema::TYPE_STRING.' NOT NULL',
-            'auth_key'=>Schema::TYPE_STRING.'(32) NOT NULL',
-            'status'=>Schema::TYPE_SMALLINT.' NOT NULL',
-            'created_at'=>Schema::TYPE_INTEGER.' NOT NULL',
-            'updated_at'=>Schema::TYPE_INTEGER.' NOT NULL'
+            'password'=>Schema::TYPE_STRING.' NOT NULL',
+            'phone'=>Schema::TYPE_STRING,
+//            'rights'=>Schema::TYPE_STRING,
+//            'auth_key'=>Schema::TYPE_STRING,
+//            'status'=>Schema::TYPE_SMALLINT,
+//            'created_at'=>Schema::TYPE_INTEGER,
+//            'updated_at'=>Schema::TYPE_INTEGER
         ]);
     }
 

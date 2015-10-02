@@ -17,7 +17,7 @@ use app\components\AlertWidget;
         <?= $form->field($model, 'father') ?>
         <?= $form->field($model, 'login') ?>
         <?= $form->field($model, 'password')->passwordInput() ?>
-        <?= $form->field($model, 'repeat_password')->passwordInput() ?>
+        <?= $form->field($model, 'repeat_password')/*->passwordInput()*/ ?>
         <?= $form->field($model, 'email') ?>
         <?= $form->field($model, 'phone') ?>
         <?= $form->field($model, 'captcha') ?>

@@ -13,7 +13,7 @@ use Yii;
  * @property string $name
  * @property string $father
  * @property string $email
- * @property string $pass
+ * @property string $password
  * @property string $phone
  * @property string $rights
  * @property string $auth_key
@@ -27,7 +27,7 @@ class Users extends \yii\db\ActiveRecord
     const STATUS_NOT_ACTIVE = 1;
     const STATUS_ACTIVE = 10;
 
-    public $password;
+   /* public $password;*/
     /**
      * @inheritdoc
      */
@@ -42,11 +42,11 @@ class Users extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['login', 'family', 'name', 'father', 'email', 'password', 'phone', 'rights'], 'filter', 'filter' => 'trim'],
-            [['login', 'family', 'name', 'father', 'email', 'password', 'phone', 'rights'], 'required'],
+            [['login', 'family', 'name', 'father', 'email', 'phone'], 'filter', 'filter' => 'trim'],
+            [['login', 'family', 'name', 'email', 'password', 'phone'], 'required'],
             ['email','email'],
-            [['status', 'created_at', 'updated_at'], 'integer'],
-            [['login', 'family', 'name', 'pass'], 'string', 'min'=> 3,'max' => 255],
+            /*[['status', 'created_at', 'updated_at'], 'integer'],*/
+            [['login', 'family', 'name'], 'string', 'min'=> 3,'max' => 255],
             ['login','unique','message'=>'Этот логин уже зарегистрирован'],
             ['email','unique','message'=>'Эта почта уже зарегистрирована'],
             ['phone','unique','message'=>'Этот телефон уже зарегистрирован']
@@ -65,13 +65,21 @@ class Users extends \yii\db\ActiveRecord
             'name' => 'Name',
             'father' => 'Father',
             'email' => 'Email',
-            'password' => 'Pass',
+            'password' => 'Password',
             'phone' => 'Phone',
-            'rights' => 'Rights',
+            /*'rights' => 'Rights',
             'auth_key' => 'Auth Key',
             'status' => 'Status',
             'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'updated_at' => 'Updated At',*/
         ];
+    }
+    /* Хелперы */
+    public function setPassword($password){
+        $this->password = Yii::$app->security->generatePasswordHash($password);
+    }
+
+    public function generateAuthKey(){
+        $this->auth_key = Yii::$app->security->generateRandomString();
     }
 }
