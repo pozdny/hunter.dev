@@ -117,6 +117,18 @@
       }
     }
   }
+  .main-reg {
+    margin-left: 160px;
+    .form-control,
+    #w1-warning-0{
+      width: 550px;
+    }
+    .field-regform-captcha {
+      #regform-captcha {
+        width: 200px;
+      }
+    }
+  }
 }
 
 

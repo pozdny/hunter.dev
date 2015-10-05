@@ -34,11 +34,12 @@ AppAsset::register($this);
             <div id="logo">
             </div>
             <div id="authorization">
+                <a id="forgot" href="">Забыли пароль?</a>
                 <form action="#" enctype="text/plain" id="header_log_in">
                     <input id="player_login" class="pole" type="text" placeholder="Логин">
                     <input id="player_password" class="pole" type="password" placeholder="Пароль">
                     <a id="log_in" href="">ВХОД</a>
-                   <a id="registration" href="#">РЕГИСТРАЦИЯ</a>
+                    <a id="registration" href="#">РЕГИСТРАЦИЯ</a>
                 </form>
             </div>
         </div>
@@ -77,6 +78,7 @@ AppAsset::register($this);
         </div>
     </div>
 </header>
+<div id="bg"></div>
 <div id="branches_left"></div>
 <div id="branches_right"></div>
 <section>

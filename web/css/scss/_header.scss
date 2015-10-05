@@ -41,12 +41,19 @@ header{
     float: right;
     height: 84px;
     width: 390px;
-    padding-top: 24px;
+    padding-top: 5px;
+    a:first-child{
+      text-decoration: none;
+      margin-left: 282px;
+    }
   }
 
   #authorization a{
     color:black;
     text-decoration: underline;
+    form{
+
+    }
   }
   #authorization a:hover{
     text-decoration: none;

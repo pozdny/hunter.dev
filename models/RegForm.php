@@ -18,10 +18,14 @@ class RegForm extends Model{
     public $status;
 
     public function rules(){
+        /*$rules = parent::rules();
+        $rules[] = ['captcha','required'];
+        $rules[] = ['captcha','captcha'];*/
         return [
-            [['login','email','password'/*,'repeat_password','captcha'*/,'family','name'], 'required'],
+            [['login','email','password'/*,'repeat_password','captcha'*/,'family','name','captcha'], 'required'],
             [['login', 'family', 'name', 'father', 'email', 'phone'], 'filter', 'filter' => 'trim'],
             ['email','email'],
+            ['captcha','captcha'],
             [['login', 'family', 'name'], 'string', 'min'=> 3,'max' => 255],
             ['password', 'string', 'min'=> 6,'max' => 255],
             ['login','unique','targetClass'=>Users::className(),
@@ -30,12 +34,16 @@ class RegForm extends Model{
                 'message'=>'Эта почта уже зарегистрирована'],
             ['phone','unique','targetClass'=>Users::className(),
                 'message'=>'Этот телефон уже зарегистрирован'],
+
+
 /*            ['status','default','value'=>User::STATUS_ACTIVE,'on'=>'default'],
             ['status','in','range'=>[
                 User::STATUS_NOT_ACTIVE,
                 User::STATUS_ACTIVE
             ]],*/
         ];
+
+
     }
     /**
      * @inheritdoc
@@ -48,10 +56,10 @@ class RegForm extends Model{
             'father' => 'Отчество',
             'login' => 'Логин в игре*',
             'password' => 'Пароль*',
-            //'repeat_password' => 'Повтор пароля*',
+            'repeat_password' => 'Повтор пароля*',
             'email' => 'Email*',
             'phone' => 'Телефон',
-            //'captcha' => 'Капча*'
+            'captcha' => 'Докажи, что ты не робот* '
         ];
     }
 
